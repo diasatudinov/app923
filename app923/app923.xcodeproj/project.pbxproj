@@ -13,6 +13,7 @@
 		2B0456E02C9826320015F09D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0456DF2C9826320015F09D /* Preview Assets.xcassets */; };
 		2B0456E82C9827620015F09D /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456E72C9827620015F09D /* LoaderUIView.swift */; };
 		2B0456EE2C9828270015F09D /* ReOnboardingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456ED2C9828270015F09D /* ReOnboardingUIView.swift */; };
+		2B0456F02C9829C50015F09D /* UsOnboardingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456EF2C9829C50015F09D /* UsOnboardingUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2B0456DF2C9826320015F09D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B0456E72C9827620015F09D /* LoaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
 		2B0456ED2C9828270015F09D /* ReOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReOnboardingUIView.swift; sourceTree = "<group>"; };
+		2B0456EF2C9829C50015F09D /* UsOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsOnboardingUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		2B0456EC2C98280C0015F09D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				2B0456EF2C9829C50015F09D /* UsOnboardingUIView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				2B0456DB2C9826300015F09D /* ContentView.swift in Sources */,
 				2B0456D92C9826300015F09D /* app923App.swift in Sources */,
+				2B0456F02C9829C50015F09D /* UsOnboardingUIView.swift in Sources */,
 				2B0456EE2C9828270015F09D /* ReOnboardingUIView.swift in Sources */,
 				2B0456E82C9827620015F09D /* LoaderUIView.swift in Sources */,
 			);
