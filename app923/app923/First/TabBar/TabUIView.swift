@@ -11,6 +11,7 @@ struct TabUIView: View {
     @State var selectedTab = 0
     private let tabs = ["Home", "Attractions", "Memories", "Settings"]
     
+    @ObservedObject var collectionVM = CollectionViewModel()
 
 //    @ObservedObject var attractionVM = AttractionViewModel()
 //    @ObservedObject var settingsVM = SettingsViewModel()
@@ -20,10 +21,10 @@ struct TabUIView: View {
             switch selectedTab {
             case 0:
                 //HomeUIView(viewModel: attractionVM, settingsVM: settingsVM, tabNum: $selectedTab)
-                    Text("View 1")
+                HomeUIView()
             case 1:
                 //AttractionsUIView(viewModel: attractionVM, settingsVM: settingsVM)
-                Text("View 2")
+                MyCollectionUIView(viewModel: collectionVM)
             case 2:
                // MemoriesUIView(viewModel: attractionVM, settingsVM: settingsVM, tabNum: $selectedTab)
                 Text("View 3")
@@ -38,7 +39,7 @@ struct TabUIView: View {
                     
                     ZStack {
                         Rectangle()
-                            .fill(Color.mainBg)
+                            .fill(Color.secondBg)
                             .frame(height: 80)
                             
                         HStack(spacing: 50) {
@@ -60,11 +61,7 @@ struct TabUIView: View {
                                 
                             }
                         }.padding(.bottom, 5)
-                        
-                        Rectangle()
-                            .fill(Color.black)
-                            .frame(height: 1)
-                            .padding(.bottom, 78)
+                    
                     }
                     
                 }.ignoresSafeArea()
