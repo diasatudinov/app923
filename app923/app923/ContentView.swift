@@ -7,14 +7,19 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-            Text("Hello, world!")
+            MultiColoredProgressView(totalCost: 350, popularCost: 525, plannedCost: 935)
+                .padding()
+            
+            Text("Progress with Blue (Total), Red (Popular), Green (Planned)")
+                .padding()
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemGray6))
     }
 }
 

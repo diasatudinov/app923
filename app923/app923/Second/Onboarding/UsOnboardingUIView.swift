@@ -128,13 +128,13 @@ struct UsOnboardingUIView: View {
             } else {
                 if isNotificationView {
                     ZStack {
-                        Color.secondBg
+                        Color.mainBg
                             .ignoresSafeArea()
                         
                         ZStack {
                             
                             
-                            VStack {
+                            VStack(spacing: 0) {
                                 HStack {
                                     Spacer()
                                     Button {
@@ -150,34 +150,46 @@ struct UsOnboardingUIView: View {
                                         }
                                     }
                                 }.padding(.horizontal)
-                                Image("notifications920")
-                                    .padding(.top, 35)
-                                VStack(spacing: 12) {
-                                    Text("Don’t miss anything")
-                                        .font(.title)
-                                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                        .multilineTextAlignment(.center)
-                                    Text("Don’t miss the most userful information")
-                                        .font(.system(size: 15, weight: .semibold))
-                                        .multilineTextAlignment(.center)
-                                        .foregroundColor(.gray.opacity(0.5))
-                                }.frame(height: 100).padding(.bottom, 10).padding(.horizontal, 30).foregroundColor(.white)
-                                
-                                Spacer()
-                                Button {
-                                    isNotificationView = false
-                                    onboardingShowed = true
-                                } label: {
+                                ZStack {
+                                    Image("notifications1923")
+                                    Image("notifications2923")
+                                        .padding(.top, 65)
+                                }.padding(.top, 35)
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.secondBg).edgesIgnoringSafeArea(.bottom)
+                                        .frame(height: 300)
                                     
-                                    Text("Next")
-                                        .foregroundColor(Color.white)
-                                        .font(.system(size: 15))
-                                        .padding()
-                                        .frame(maxWidth: .infinity)
-                                }.frame(height: 50).background(Color.blueBtn)
-                                    .cornerRadius(16).padding(.horizontal)
+                                    VStack {
+                                        VStack(spacing: 12) {
+                                            Text("Don’t miss anything")
+                                                .font(.title)
+                                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                                .multilineTextAlignment(.center)
+                                            Text("Don’t miss the most userful information")
+                                                .font(.system(size: 15, weight: .semibold))
+                                                .multilineTextAlignment(.center)
+                                                .foregroundColor(.gray.opacity(0.5))
+                                        }.padding(.horizontal, 30).padding(.bottom, 10).frame(height: 100).foregroundColor(.white)
+                                        
+                                        
+                                        
+                                        Spacer()
+                                        Button {
+                                            isNotificationView = false
+                                            onboardingShowed = true
+                                        } label: {
+                                            
+                                            Text("Next")
+                                                .foregroundColor(Color.white)
+                                                .font(.system(size: 15))
+                                                .padding()
+                                                .frame(maxWidth: .infinity)
+                                        }.frame(height: 50).background(Color.blueBtn)
+                                            .cornerRadius(16).padding(.horizontal).padding(.bottom, 50)
+                                    }
+                                }
                             }
-                            
                         }
                     }
                     

@@ -14,6 +14,9 @@
 		2B0456E82C9827620015F09D /* LoaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456E72C9827620015F09D /* LoaderUIView.swift */; };
 		2B0456EE2C9828270015F09D /* ReOnboardingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456ED2C9828270015F09D /* ReOnboardingUIView.swift */; };
 		2B0456F02C9829C50015F09D /* UsOnboardingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456EF2C9829C50015F09D /* UsOnboardingUIView.swift */; };
+		2B0456F32C9830080015F09D /* TabUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456F22C9830080015F09D /* TabUIView.swift */; };
+		2B0456F72C9835390015F09D /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456F62C9835390015F09D /* HomeUIView.swift */; };
+		2B0456FA2C983C1F0015F09D /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0456F92C983C1F0015F09D /* CustomProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		2B0456E72C9827620015F09D /* LoaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderUIView.swift; sourceTree = "<group>"; };
 		2B0456ED2C9828270015F09D /* ReOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReOnboardingUIView.swift; sourceTree = "<group>"; };
 		2B0456EF2C9829C50015F09D /* UsOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsOnboardingUIView.swift; sourceTree = "<group>"; };
+		2B0456F22C9830080015F09D /* TabUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUIView.swift; sourceTree = "<group>"; };
+		2B0456F62C9835390015F09D /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
+		2B0456F92C983C1F0015F09D /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 		2B0456D72C9826300015F09D /* app923 */ = {
 			isa = PBXGroup;
 			children = (
+				2B0456F82C983BFF0015F09D /* Service */,
 				2B0456E92C9827F80015F09D /* First */,
 				2B0456EA2C9827FD0015F09D /* Second */,
 				2B0456E62C9827550015F09D /* LoaderView */,
@@ -87,6 +94,8 @@
 		2B0456E92C9827F80015F09D /* First */ = {
 			isa = PBXGroup;
 			children = (
+				2B0456F42C98351B0015F09D /* Home */,
+				2B0456F12C982FF20015F09D /* TabBar */,
 				2B0456EB2C9828030015F09D /* Onboarding */,
 			);
 			path = First;
@@ -114,6 +123,38 @@
 				2B0456EF2C9829C50015F09D /* UsOnboardingUIView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2B0456F12C982FF20015F09D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2B0456F22C9830080015F09D /* TabUIView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		2B0456F42C98351B0015F09D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2B0456F52C9835270015F09D /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2B0456F52C9835270015F09D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B0456F62C9835390015F09D /* HomeUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B0456F82C983BFF0015F09D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2B0456F92C983C1F0015F09D /* CustomProgressView.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,8 +229,11 @@
 			files = (
 				2B0456DB2C9826300015F09D /* ContentView.swift in Sources */,
 				2B0456D92C9826300015F09D /* app923App.swift in Sources */,
+				2B0456F72C9835390015F09D /* HomeUIView.swift in Sources */,
+				2B0456F32C9830080015F09D /* TabUIView.swift in Sources */,
 				2B0456F02C9829C50015F09D /* UsOnboardingUIView.swift in Sources */,
 				2B0456EE2C9828270015F09D /* ReOnboardingUIView.swift in Sources */,
+				2B0456FA2C983C1F0015F09D /* CustomProgressView.swift in Sources */,
 				2B0456E82C9827620015F09D /* LoaderUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
