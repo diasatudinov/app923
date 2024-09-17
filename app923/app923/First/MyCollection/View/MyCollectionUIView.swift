@@ -16,7 +16,7 @@ struct MyCollectionUIView: View {
             Color.mainBg.ignoresSafeArea()
             TabView(selection: $currentTab) {
                 MyCollection(viewModel: viewModel).tag(0)
-                Popular().tag(1)
+                Popular(viewModel: viewModel).tag(1)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .ignoresSafeArea()
@@ -44,7 +44,7 @@ struct MyCollectionUIView: View {
             }.padding(.horizontal).padding(.bottom, 100)
             
         }.sheet(isPresented: $showAddProductSheet, content: {
-            NewProductUIView(viewModel: viewModel, showAddProductSheet: $showAddProductSheet)
+            NewProductUIView(viewModel: viewModel, showAddProductSheet: $showAddProductSheet, productType: .my)
         })
     }
 }
@@ -56,6 +56,11 @@ struct MyCollectionUIView: View {
 
 struct MyCollection: View {
     @ObservedObject var viewModel: CollectionViewModel
+    
+    let columns = [
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ]
     var body: some View {
         ZStack {
             Color.mainBg.ignoresSafeArea()
@@ -74,14 +79,17 @@ struct MyCollection: View {
                             .opacity(0.12)
                     }.foregroundColor(.white)
                 } else {
-                    ScrollView {
-                        ForEach(viewModel.products, id: \.self) { product in
-                            Text(product.name)
-                            
-                            
+                    ScrollView(showsIndicators: false) {
+                        LazyVGrid(columns: columns, spacing: 16) {
+                            ForEach(viewModel.products, id: \.self) { product in
+                               // Text(product.name)
+                                CollectionCell(viewModel: viewModel, product: product).padding(.horizontal,2)
+                                
+                            }
                         }
                         
-                    }
+                        
+                    }.padding(.top, 50)
                 }
                 
                 
@@ -94,15 +102,27 @@ struct MyCollection: View {
 }
 
 struct Popular: View {
+    @ObservedObject var viewModel: CollectionViewModel
+    
+    let columns = [
+            GridItem(.flexible()),
+            GridItem(.flexible())
+        ]
     var body: some View {
         ZStack {
             Color.mainBg.ignoresSafeArea()
             VStack {
                 
                 ScrollView {
+                    LazyVGrid(columns: columns, spacing: 16) {
+                        ForEach(viewModel.products.filter({ $0.isPopular == true }), id: \.self) { product in
+                            CollectionCell(viewModel: viewModel, product: product).padding(.horizontal,2)
+                            
+                        }
+                    }
                     
                     
-                }
+                }.padding(.top, 50)
                 
                 
                 
