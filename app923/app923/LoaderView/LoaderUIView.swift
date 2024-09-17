@@ -46,10 +46,10 @@ struct LoaderUIView: View {
             
         } else {
             if true {
-                //ReOnboardingUIView()
+                ReOnboardingUIView()
                 
             } else {
-                //UsOnboardingUIView()
+                UsOnboardingUIView()
             }
             
         }
