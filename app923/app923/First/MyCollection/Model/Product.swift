@@ -11,7 +11,7 @@ struct Product: Identifiable, Hashable, Codable{
     let id = UUID()
     var name: String
     var brand : String
-    var price : String
+    var price : Double
     var isPopular = false
     var imageData: Data?
     
