@@ -11,7 +11,7 @@ struct LoaderUIView: View {
     @State private var progress: Double = 0.0
     @State private var timer: Timer?
     @State private var isLoadingView: Bool = true
-
+    
     var body: some View {
         if isLoadingView {
             ZStack {
@@ -28,8 +28,8 @@ struct LoaderUIView: View {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle(tint: .blue))
                             .scaleEffect(x: 1.7, y: 1.7, anchor: .center)
-                            
-                            
+                        
+                        
                     }
                     .foregroundColor(.black)
                     .padding(14)

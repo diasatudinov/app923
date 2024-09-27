@@ -12,7 +12,7 @@ class SettingsViewModel: ObservableObject {
     
     
     func shareApp() {
-        guard let url = URL(string: "https://apps.apple.com/app/golfstat-win-guru/id6670453682") else { return }
+        guard let url = URL(string: "https://apps.apple.com/us/app/pocket-beauty/id6723889087") else { return }
         let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
@@ -26,7 +26,7 @@ class SettingsViewModel: ObservableObject {
     }
     
     func openUsagePolicy() {
-        guard let url = URL(string: "https://www.termsfeed.com/live/61db5db7-6501-43e9-8422-5c4aa3e6ddd0") else { return }
+        guard let url = URL(string: "https://www.termsfeed.com/live/5ce4059c-64b2-4ad5-b6bc-b937a7c90837") else { return }
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
