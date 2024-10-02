@@ -77,6 +77,25 @@ struct SettingsUIView: View {
                     )
                 }
                 
+                NavigationLink {
+                    AwardUIView(viewModel: viewModel)
+                } label: {
+                    HStack(alignment: .top) {
+                        Text("Awards")
+                            .foregroundColor(.white)
+                            .font(.system(size: 22, weight: .bold))
+                        Spacer()
+                        
+                        Image(systemName: "medal.fill")
+                            .foregroundColor(.mainBg)
+                            .font(.system(size: 38))
+                    }.padding().background(Color.blue).cornerRadius(16)
+                        .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(.blue, lineWidth: 2)
+                    )
+                }
+                
                 Spacer()
             }.padding()
         }

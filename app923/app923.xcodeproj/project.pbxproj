@@ -29,6 +29,12 @@
 		2B58EAF52C999F3300EF694C /* PlannedProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58EAF42C999F3300EF694C /* PlannedProductCell.swift */; };
 		2B58EAFA2C99A2A800EF694C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58EAF92C99A2A800EF694C /* SettingsViewModel.swift */; };
 		2B58EAFC2C99A2B300EF694C /* SettingsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B58EAFB2C99A2B300EF694C /* SettingsUIView.swift */; };
+		2B6A05062CAD62C1000E0484 /* AwardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A05052CAD62C1000E0484 /* AwardUIView.swift */; };
+		2B6A05082CAD646F000E0484 /* AwardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A05072CAD646F000E0484 /* AwardCell.swift */; };
+		2B6A050B2CAD6616000E0484 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A050A2CAD6616000E0484 /* Award.swift */; };
+		2B6A050D2CAD7012000E0484 /* NewAwardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A050C2CAD7012000E0484 /* NewAwardUIView.swift */; };
+		2B6A050F2CAD73D0000E0484 /* AwardDetailsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A050E2CAD73D0000E0484 /* AwardDetailsUIView.swift */; };
+		2B6A05112CAD7EA1000E0484 /* EditAwardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A05102CAD7EA1000E0484 /* EditAwardUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +61,12 @@
 		2B58EAF42C999F3300EF694C /* PlannedProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedProductCell.swift; sourceTree = "<group>"; };
 		2B58EAF92C99A2A800EF694C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		2B58EAFB2C99A2B300EF694C /* SettingsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUIView.swift; sourceTree = "<group>"; };
+		2B6A05052CAD62C1000E0484 /* AwardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardUIView.swift; sourceTree = "<group>"; };
+		2B6A05072CAD646F000E0484 /* AwardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardCell.swift; sourceTree = "<group>"; };
+		2B6A050A2CAD6616000E0484 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		2B6A050C2CAD7012000E0484 /* NewAwardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAwardUIView.swift; sourceTree = "<group>"; };
+		2B6A050E2CAD73D0000E0484 /* AwardDetailsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardDetailsUIView.swift; sourceTree = "<group>"; };
+		2B6A05102CAD7EA1000E0484 /* EditAwardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAwardUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +255,7 @@
 		2B58EAF62C99A28E00EF694C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				2B6A05092CAD660A000E0484 /* Model */,
 				2B58EAF82C99A29B00EF694C /* View */,
 				2B58EAF72C99A29600EF694C /* ViewModel */,
 			);
@@ -261,8 +274,21 @@
 			isa = PBXGroup;
 			children = (
 				2B58EAFB2C99A2B300EF694C /* SettingsUIView.swift */,
+				2B6A05052CAD62C1000E0484 /* AwardUIView.swift */,
+				2B6A050E2CAD73D0000E0484 /* AwardDetailsUIView.swift */,
+				2B6A050C2CAD7012000E0484 /* NewAwardUIView.swift */,
+				2B6A05102CAD7EA1000E0484 /* EditAwardUIView.swift */,
+				2B6A05072CAD646F000E0484 /* AwardCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2B6A05092CAD660A000E0484 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B6A050A2CAD6616000E0484 /* Award.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6A050B2CAD6616000E0484 /* Award.swift in Sources */,
 				2B0456DB2C9826300015F09D /* ContentView.swift in Sources */,
 				2B0457042C9846770015F09D /* TabBarView.swift in Sources */,
 				2B0456D92C9826300015F09D /* app923App.swift in Sources */,
@@ -342,14 +369,19 @@
 				2B58EAF32C999C1500EF694C /* PlannedUIView.swift in Sources */,
 				2B58EAFC2C99A2B300EF694C /* SettingsUIView.swift in Sources */,
 				2B58EAFA2C99A2A800EF694C /* SettingsViewModel.swift in Sources */,
+				2B6A05082CAD646F000E0484 /* AwardCell.swift in Sources */,
 				2B0457022C98466C0015F09D /* TabBarItem.swift in Sources */,
 				2B58EAF52C999F3300EF694C /* PlannedProductCell.swift in Sources */,
 				2B0456F72C9835390015F09D /* HomeUIView.swift in Sources */,
 				2B0457062C9846DD0015F09D /* Product.swift in Sources */,
 				2B0457002C9840F30015F09D /* MyCollectionUIView.swift in Sources */,
+				2B6A05062CAD62C1000E0484 /* AwardUIView.swift in Sources */,
+				2B6A050F2CAD73D0000E0484 /* AwardDetailsUIView.swift in Sources */,
 				2B0456F32C9830080015F09D /* TabUIView.swift in Sources */,
 				2B04570C2C984D2E0015F09D /* CollectionViewModel.swift in Sources */,
+				2B6A050D2CAD7012000E0484 /* NewAwardUIView.swift in Sources */,
 				2B0457082C9847910015F09D /* NewProductUIView.swift in Sources */,
+				2B6A05112CAD7EA1000E0484 /* EditAwardUIView.swift in Sources */,
 				2B58EAEE2C998C3100EF694C /* CollectionCell.swift in Sources */,
 				2B0456F02C9829C50015F09D /* UsOnboardingUIView.swift in Sources */,
 				2B0456EE2C9828270015F09D /* ReOnboardingUIView.swift in Sources */,
@@ -490,7 +522,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"app923/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Pocket Beauty";
+				INFOPLIST_KEY_CFBundleDisplayName = "Pocket Training";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -523,7 +555,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"app923/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Pocket Beauty";
+				INFOPLIST_KEY_CFBundleDisplayName = "Pocket Training";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
