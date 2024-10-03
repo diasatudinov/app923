@@ -10,8 +10,50 @@ import StoreKit
 
 class SettingsViewModel: ObservableObject {
     
-    @Published var awards: [Award] = [Award(name: "The most brilliant beard", title: "Win a competition among other friends, take care of your vegetation and win", date: Date()), Award(name: "The most brilliant beard", title: "Win a competition among other friends, take care of your vegetation and win", date: Date())]
+    @Published var awards: [Award] = []{
+        didSet {
+            saveProduct()
+        }
+    }
     
+    private let productsFileName = "awards.json"
+    
+    init() {
+        loadProduct()
+    }
+    
+    
+    private func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    private func productsFilePath() -> URL {
+        return getDocumentsDirectory().appendingPathComponent(productsFileName)
+    }
+    
+    private func saveProduct() {
+        DispatchQueue.global().async {
+            let encoder = JSONEncoder()
+            do {
+                let data = try encoder.encode(self.awards)
+                try data.write(to: self.productsFilePath())
+            } catch {
+                print("Failed to save players: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    
+    private func loadProduct() {
+        let decoder = JSONDecoder()
+        do {
+            let data = try Data(contentsOf: productsFilePath())
+            awards = try decoder.decode([Award].self, from: data)
+        } catch {
+            print("Failed to load players: \(error.localizedDescription)")
+        }
+    }
     
     func addAward(_ award: Award) {
         awards.append(award)

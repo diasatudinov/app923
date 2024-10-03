@@ -118,6 +118,7 @@ struct AwardUIView: View {
                                 }.padding(.horizontal, 48).padding(.top)
                                 Spacer()
                                 Button {
+                                    showAddProductSheet = true
                                     isOption = false
                                 } label: {
                                     ZStack {
