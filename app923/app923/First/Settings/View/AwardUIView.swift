@@ -96,8 +96,9 @@ struct AwardUIView: View {
                         ZStack {
                             Image("eventImage")
                                 .resizable()
-                                .frame(width: UIScreen.main.bounds.width - 60, height: 405)
-                                .aspectRatio(contentMode: .fit)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: UIScreen.main.bounds.width - 70, height: 405)
+                                
                                 .cornerRadius(24)
                             
                             VStack {
@@ -117,7 +118,7 @@ struct AwardUIView: View {
                                 }.padding(.horizontal, 48).padding(.top)
                                 Spacer()
                                 Button {
-                                    viewModel.openLink()
+                                    isOption = false
                                 } label: {
                                     ZStack {
                                         Rectangle()

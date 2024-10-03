@@ -35,6 +35,8 @@
 		2B6A050D2CAD7012000E0484 /* NewAwardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A050C2CAD7012000E0484 /* NewAwardUIView.swift */; };
 		2B6A050F2CAD73D0000E0484 /* AwardDetailsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A050E2CAD73D0000E0484 /* AwardDetailsUIView.swift */; };
 		2B6A05112CAD7EA1000E0484 /* EditAwardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A05102CAD7EA1000E0484 /* EditAwardUIView.swift */; };
+		2B6A051F2CAE8B9B000E0484 /* WUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A051E2CAE8B9B000E0484 /* WUIView.swift */; };
+		2B6A05212CAE8C16000E0484 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A05202CAE8C16000E0484 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		2B6A050C2CAD7012000E0484 /* NewAwardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAwardUIView.swift; sourceTree = "<group>"; };
 		2B6A050E2CAD73D0000E0484 /* AwardDetailsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardDetailsUIView.swift; sourceTree = "<group>"; };
 		2B6A05102CAD7EA1000E0484 /* EditAwardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAwardUIView.swift; sourceTree = "<group>"; };
+		2B6A051E2CAE8B9B000E0484 /* WUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUIView.swift; sourceTree = "<group>"; };
+		2B6A05202CAE8C16000E0484 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		2B0456EA2C9827FD0015F09D /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				2B6A051D2CAE8B93000E0484 /* WUIView */,
 				2B0456EC2C98280C0015F09D /* Onboarding */,
 			);
 			path = Second;
@@ -195,6 +200,7 @@
 				2B0457032C9846770015F09D /* TabBarView.swift */,
 				2B0457012C98466C0015F09D /* TabBarItem.swift */,
 				2B0457092C9849710015F09D /* ImagePicker.swift */,
+				2B6A05202CAE8C16000E0484 /* Device.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -291,6 +297,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2B6A051D2CAE8B93000E0484 /* WUIView */ = {
+			isa = PBXGroup;
+			children = (
+				2B6A051E2CAE8B9B000E0484 /* WUIView.swift */,
+			);
+			path = WUIView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -365,6 +379,7 @@
 				2B0456DB2C9826300015F09D /* ContentView.swift in Sources */,
 				2B0457042C9846770015F09D /* TabBarView.swift in Sources */,
 				2B0456D92C9826300015F09D /* app923App.swift in Sources */,
+				2B6A051F2CAE8B9B000E0484 /* WUIView.swift in Sources */,
 				2B04570A2C9849710015F09D /* ImagePicker.swift in Sources */,
 				2B58EAF32C999C1500EF694C /* PlannedUIView.swift in Sources */,
 				2B58EAFC2C99A2B300EF694C /* SettingsUIView.swift in Sources */,
@@ -379,6 +394,7 @@
 				2B6A050F2CAD73D0000E0484 /* AwardDetailsUIView.swift in Sources */,
 				2B0456F32C9830080015F09D /* TabUIView.swift in Sources */,
 				2B04570C2C984D2E0015F09D /* CollectionViewModel.swift in Sources */,
+				2B6A05212CAE8C16000E0484 /* Device.swift in Sources */,
 				2B6A050D2CAD7012000E0484 /* NewAwardUIView.swift in Sources */,
 				2B0457082C9847910015F09D /* NewProductUIView.swift in Sources */,
 				2B6A05112CAD7EA1000E0484 /* EditAwardUIView.swift in Sources */,
